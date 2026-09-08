@@ -118,7 +118,7 @@ Then open the URL Streamlit prints (typically `http://localhost:8501`).
 
 Upload your own CSV/Excel file from the sidebar, or use the bundled `data/sample_dataset.csv` — a synthetic customer dataset that intentionally contains missing values, a few duplicate rows, some outliers, and an invalid negative age, so you can see every detective in action.
 
-## 🧪 Running the Tests
+##  Running the Tests
 
 ```bash
 pytest tests/ -v
@@ -126,7 +126,7 @@ pytest tests/ -v
 
 The test suite covers the data loader, data-quality checks, statistics, anomaly detection, correlation analysis, pattern detection, clustering, the ML pipeline, report generation, and insight generation — all against deterministic, seeded synthetic data.
 
-## 🧠 Design Notes
+##  Design Notes
 
 - **Modules vs. pages** — everything under `modules/` and `models/` is plain Python with no Streamlit dependency, so it can be tested and reused independently of the UI. Everything under `app_pages/` only handles rendering and user input, delegating all computation to `modules/`.
 - **No invented numbers** — every insight, pattern finding, and report statement is generated from an actual computed value. The optional LLM enhancement step is explicitly instructed to rephrase, never fabricate.
